@@ -18,7 +18,7 @@ def example_dag_api():
             number_list.append(random.randint(0, 1000))
         return number_list
     
-    @task(multiple_outputs=True)
+    @task(multiple_outputs=False)
     def number_evaluator(input: list) -> int:
         total = 0
         for num in input:
